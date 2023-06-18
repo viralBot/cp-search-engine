@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CodeWiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="welcome-message">
+        <h2>Welcome to CodeWiz</h2>
+        <p>Discover the world of coding and problem-solving</p>
+    </div>
+    <form action="/" method="POST">
+        {{ form.csrf_token }}
+        <div class="container">
+            <div class="search-container">
+                <input type="text" name="search" class="form-control mb-2" placeholder="Enter relevant keywords">
+                <button class="search-button">Search</button>
+            </div>
+        </div>
+    </form>
+    <!-- <div class="results" style="display: flex;">
+        <div id="lc_results">
+            <img src="https://cdn.cdo.mit.edu/wp-content/uploads/sites/67/2021/01/0_zuhXdNAIUoxEem4-.png" height="100px" width="300px" alt="">
+            {% if lc_results %}
+            <h1>Top results from Leetcode</h1>
+            {% for result in lc_results %}
+            <ul>
+                <li><a href="{{ result["Question Link"] }}">{{result["Question Link"]}}</a></li>
+            </ul>
+            {% endfor %}
+            {% endif %}
+        </div>
+        <div id="cf_results">
+            <img src="https://repository-images.githubusercontent.com/390296311/0f6c1240-462e-47ff-870d-e2d0ebb181f1"height="100px" width="300px" alt="">
+            {% if cf_results%}
+            <h1>Top results from Codeforces</h1>
+            {% for result in cf_results %}
+            <ul>
+                <li><a href="{{ result["Question Link"] }}">{{result["Question Title"]}}</a></li>
+            </ul>
+            {% endfor %}
+            {% endif %}
+        </div>
+    </div> -->
+    <main>
+        <section class="card-section">
+            <h2>Leetcode</h2>
+            {% if lc_results %}
+            {% for result in lc_results %}
+            <div class="card">
+                <img src="{{ url_for('static', filename='Leetcode.png') }}" alt="">
+                <h3>{{result["Question Title"]}}</h3>
+                <div class="but">
+                    <button style="--clr:#0FF0FC" onclick="window.location.href=`{{ result['Question Link']}}`">
+                        <span>Solve Now</span><i></i>
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </section>
+        <section class="card-section">
+            <h2>Codeforces</h2>
+            {% if cf_results %}
+            {% for result in cf_results %}
+            <div class="card">
+                <img src="{{ url_for('static', filename='Codeforces.png') }}" alt="">
+                <h3>{{result["Question Title"]}}</h3>
+                <div class="but">
+                    <button style="--clr:#0FF0FC" onclick="window.location.href=`{{ result['Question Link']}}`">
+                        <span>Solve Now</span><i></i>
+                    </button>
+                </div>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 CodeWiz. All rights reserved.</p>
+        <p>Thank you for visiting!</p>
+    </footer>
+</body>
+
+</html>
