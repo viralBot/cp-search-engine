@@ -15,23 +15,28 @@ You can download the latest version of Chrome WebDriver from the official Seleni
 
 ## Getting Started
 1. Clone this repository to your local machine using the following command:
+
 `git clone https://github.com/viralBot/cp-search-engine.git`
 
 2. Open the project directory in your preferred code editor/IDE, such as Visual Studio Code.
 
 3. Install the required Python packages using pip. Run the following command:
+
 `pip install -r requirements.txt`
 This will install the necessary packages, including Selenium, Flask, Flask-WTF, chardet, and bs4.
 
 4. Next, we need to scrape questions from LeetCode and Codeforces. Run the following command to scrape the questions:
+
 `python leetcode_scrape.py`
 This will scrape the question titles and problem statements from both platforms. Make sure you are in the correct directory(LC_SCRAPE in this case) before running the command.
 
 5. Next, filter the relevant information by running the cleaner script:
+
 `python lc_cleaner.py`
 The cleaner script will process the scraped data and filter out the relevant information.
 
 6. After cleaning the data, run the explore script to store the filtered question data into separate question files:
+
 `python lc_explore.py`
 The explore script will store the filtered question data, URLs, and titles in the QDATA folder.
 
@@ -40,10 +45,12 @@ The explore script will store the filtered question data, URLs, and titles in th
 **Note**: The exploring process might take a while as it involves processing a large amount of data.
 
 8. Now, we need to create the TF-IDF data required for searching. Run the prepare script:
+
 `python prepare.py`
 The prepare script will generate the TF-IDF values, including vocabulary, documents, inverted indices, and IDF values for both LeetCode and Codeforces question data.
 
 9. Finally, run the Flask app using the following command in the terminal:
+
 `flask --app app run`
 Wait for about a minute, and then the Flask app will run on the development server.
 Open your web browser and navigate to the generated link (e.g., http://127.0.0.1:5000) to access the application.
@@ -56,5 +63,6 @@ If you'd like to contribute to the CodeWiz Search Engine project, please follow 
 3. Make your changes in the branch and commit them.
 4. Push the branch to your forked repository.
 5. Submit a pull request to the main branch of the original repository, describing your changes in detail
+
 
 **Thank you for your interest in our project! Happy coding!**
