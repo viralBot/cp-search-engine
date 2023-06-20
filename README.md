@@ -9,7 +9,7 @@ Before building the code locally, ensure that you have the following prerequisit
 3. Visual Studio Code (or any preferred code editor/IDE)
 
 ## Getting Started
-1. Clone this repository to your local machine using the following command:\n
+1. Clone this repository to your local machine using the following command:
 git clone https://github.com/viralBot/cp-search-engine.git
 
 2. Open the project directory in your preferred code editor/IDE, such as Visual Studio Code.
