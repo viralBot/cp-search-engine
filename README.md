@@ -9,7 +9,7 @@ Before building the code locally, ensure that you have the following prerequisit
 3. Visual Studio Code (or any preferred code editor/IDE)
 
 ## Getting Started
-1. Clone this repository to your local machine using the following command:
+1. Clone this repository to your local machine using the following command:\n
 git clone https://github.com/viralBot/cp-search-engine.git
 
 2. Open the project directory in your preferred code editor/IDE, such as Visual Studio Code.
@@ -44,7 +44,7 @@ Wait for about a minute, and then the Flask app will run on the development serv
 Open your web browser and navigate to the generated link (e.g., http://127.0.0.1:5000) to access the application.
 
 ## Contributing
-If you'd like to contribute to the Coding Questions Search Engine project, please follow these steps:
+If you'd like to contribute to the CodeWiz Search Engine project, please follow these steps:
 
 1. Fork the repository on GitHub.
 2. Create a new branch for your feature or bug fix.
