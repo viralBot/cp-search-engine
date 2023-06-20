@@ -9,6 +9,7 @@ Before building the code locally, ensure that you have the following prerequisit
 3. Visual Studio Code (or any preferred code editor/IDE)
 4. Google Chrome browser (latest version)
 5. Chrome WebDriver (latest version)
+
 Please make sure to have the latest version of Google Chrome browser and Chrome WebDriver installed on your machine. The Chrome WebDriver version should match the Chrome browser version to ensure compatibility.
 You can download the latest version of Chrome WebDriver from the official Selenium website (https://www.selenium.dev/documentation/webdriver/driver_requirements/). Choose the appropriate WebDriver version based on your Chrome browser version and install it on your machine.
 
